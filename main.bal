@@ -61,7 +61,7 @@ public distinct service class CovidData {
 service /covid19 on new graphql:Listener(9094) {
 
     resource function get all() returns CovidData[] {
-        log:printInfo("Get all countries: ");
+        log:printInfo("Get all countries : ");
         return from CovidEntry entry in covidEntriesTable select new (entry);
     }
 
